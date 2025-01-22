@@ -1835,14 +1835,6 @@ class SpackSolverSetup:
             if pkg_name == "all":
                 continue
 
-            # package isn't a possible dependency and can't be in the solution
-            if pkg_name not in self.pkgs:
-                continue
-
-            # This package is not in the possible dependencies
-            if pkg_name not in self.pkgs:
-                continue
-
             # This package is not among possible dependencies
             if pkg_name not in self.pkgs:
                 continue
