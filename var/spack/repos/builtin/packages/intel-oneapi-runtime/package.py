@@ -43,7 +43,6 @@ class IntelOneapiRuntime(Package):
     conflicts("platform=darwin", msg="IntelOneAPI can only be installed on Linux, and FreeBSD")
 
     depends_on("libc", type="link", when="platform=linux")
-    depends_on("intel-oneapi-compilers", type="build")
 
     def install(self, spec, prefix):
         oneapi_pkg = self.spec["intel-oneapi-compilers"].package
