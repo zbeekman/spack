@@ -54,7 +54,7 @@ class GccRuntime(Package):
     depends_on("gcc", type="build")
 
     def install(self, spec, prefix):
-        gcc_pkg = self.spec["gcc"].package
+        gcc_pkg = self["gcc"]
         if spec.platform in ["linux", "freebsd"]:
             libraries = get_elf_libraries(compiler=gcc_pkg, libraries=self.LIBRARIES)
         elif spec.platform == "darwin":
