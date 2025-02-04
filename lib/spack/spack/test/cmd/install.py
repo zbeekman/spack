@@ -41,16 +41,6 @@ buildcache = SpackCommand("buildcache")
 find = SpackCommand("find")
 
 
-# @pytest.fixture(autouse=True)
-# def gcc_runtime_mock_install(mock_packages, monkeypatch):
-#     import spack.pkg.builtin.mock.gcc_runtime
-#
-#     def _mock_install(self, spec, prefix):
-#         mkdir(prefix.lib)
-#
-#     monkeypatch.setattr(spack.pkg.builtin.mock.gcc_runtime.GccRuntime, "install", _mock_install)
-
-
 @pytest.fixture()
 def noop_install(monkeypatch):
     def noop(*args, **kwargs):
